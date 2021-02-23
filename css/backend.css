@@ -450,7 +450,7 @@ input[type=submit]:active {
     }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 640px) {
     .tableHeadings {
         display: none;
     }
@@ -535,6 +535,10 @@ input[type=submit]:active {
     }
 
     .tableOrderList td:nth-of-type(6):before {
+        content: "Status";
+    }
+
+    .tableOrderList td:nth-of-type(7):before {
         content: "";
     }
 }
