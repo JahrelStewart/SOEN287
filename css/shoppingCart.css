@@ -264,6 +264,15 @@ html {
     width: 150px;
 }
 
+.column:nth-child(3) a {
+    color: #223843;
+}
+
+.column:nth-child(3) a:hover {
+    text-decoration: none;
+    color: #68B0AB;
+}
+
 .column:nth-child(4) {
     grid-column-start: 4;
 }
