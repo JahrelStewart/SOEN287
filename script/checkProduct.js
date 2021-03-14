@@ -1,8 +1,8 @@
 var currentURLs = new URL(window.location.href).pathname.split("/");
-let parseCurrentURL = "/" + currentURLs[1];
+let parseCurrentURL = "SOEN287/" + currentURLs[1];
 
 function checkURLchange(currentURL) {
-    if (strcmp(currentURL, "/ProductDescriptions") != 0) {
+    if (strcmp(currentURL, "SOEN287/ProductDescriptions") != 0) {
         sessionStorage.setItem('inputQuantity', 1);
     }
 
