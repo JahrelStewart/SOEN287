@@ -8,6 +8,15 @@ const inputQuantity = document.querySelector('.descriptionRow:nth-child(3) .inpu
 const minus = document.querySelector('.descriptionRow:nth-child(3) .plusMinus:nth-child(1)');
 const plus = document.querySelector('.descriptionRow:nth-child(3) .plusMinus:last-child');
 
+window.addEventListener('pageshow', (e) => {
+    var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+
+    if (historyTraversal) {
+        window.location.reload();
+    }
+});
+
+
 if (sessionStorage.getItem("inputQuantity")) {
     inputQuantity.value = sessionStorage.getItem("inputQuantity");
     price.childNodes[1].nodeValue = " $" + (price.getAttribute('data-value') * Math.max(inputQuantity.value, 1)).toFixed(2);
