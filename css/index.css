@@ -550,7 +550,7 @@ html {
 
 @media (max-width: 450px) {
     .header .cart_and_accont {
-        width: 60px;
+        width: 100px;
     }
 
     .header .cart_and_accont .cart span {
@@ -564,6 +564,10 @@ html {
 
 
 @media (max-width: 350px) {
+    .header .cart_and_accont {
+        width: 75px;
+    }
+    
     .texts {
         font-size: 35px;
     }
