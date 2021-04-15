@@ -7,4 +7,4 @@ Axel Solano 40046154
 Phuong Anh Trinh 40069870
 Charles-Antoine 40063098
 Osama Hussein 24537793
-Website at: https://jahrelstewart.github.io/SOEN287/index.html
+We can no longer use Github to host our website :(
