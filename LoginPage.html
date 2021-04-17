@@ -60,20 +60,20 @@
                 <div class="message">Log In</div>
 
                 <div class="log">
-                    <div class="SignUpForm" action="">
+                    <form class="SignUpForm" action="./BackEndPhp/User.php">
 
                         <div class="row1">
-                            <label for="emailEmail">Email</label>
-                            <input type="text" name="emailEmail" value="">
+                            <label for="logEmail">Email</label>
+                            <input type="text" name="logEmail" value="">
                         </div>
 
                         <div class="row2">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" value="">
+                            <label for="logPassword">Password</label>
+                            <input type="password" name="logPassword" value="">
                         </div>
 
                         <div class="row3">
-                            <button class="LogIn">Submit</button>
+                            <input class="LogIn" type="submit" name="login" value="Login">
                             <button class="resetPassword">Forgot Password</button>
                         </div>
 
@@ -86,7 +86,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -131,6 +131,7 @@
 
     </div>
 
+    <script src="./script/logIn.js"></script>
 </body>
 
 </html>
