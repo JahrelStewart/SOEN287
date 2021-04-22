@@ -30,13 +30,12 @@
             $order->addChild('orderStatus', $orderStatus);
 
             $orders->asXML($file);
-            // header('Location: ../backend12.html');
+            header('Location: ../BackEnd/backend11.php');
         }
 
         ?>
-
-<!-- try new ADD -->
-<?php
+<!-- try new add -->
+<!-- <?php
 if (isset($_POST['submit'])) {
     $orders = simplexml_load_file('../xml.orders.xml');
     // foreach($orders->order as $order){
@@ -111,7 +110,7 @@ if (isset($_POST['submit'])) {
     </table>
 </form>
 
-<!-- 
+
 <?php
 $orders = simplexml_load_file('../xml.orders.xml');
 
@@ -175,4 +174,5 @@ foreach($orders->order as $order){
             <td><input type="submit" value="Save" name="submit"></td>
         </tr>
     </table>
-</form> -->
+</form> 
+ -->

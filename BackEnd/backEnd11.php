@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 if (isset($_GET['action'])) {
     $orders = simplexml_load_file('../xml/orders.xml');
     $orderID = $_GET['orderID'];
@@ -16,7 +16,7 @@ if (isset($_GET['action'])) {
 }
 
 $orders = simplexml_load_file('../xml/orders.xml');
-?> -->
+?> 
 
 <!DOCTYPE html>
 <html>
@@ -27,8 +27,8 @@ $orders = simplexml_load_file('../xml/orders.xml');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/backend.css">
     <title>Order List</title>
-
-    <!-- <script>
+<!-- 
+    <script>
         window.addEventListener("load", function () {
             getRows();
         });
@@ -102,7 +102,7 @@ $orders = simplexml_load_file('../xml/orders.xml');
 
                 <a href="backEnd7.html">PRODUCTS</a>
                 <a href="backEnd9.html">ACCOUNTS</a>
-                <a href="backEnd11.html">ORDERS</a>
+                <a href="backEnd11.php">ORDERS</a>
 
             </div>
         </div>
@@ -118,7 +118,7 @@ $orders = simplexml_load_file('../xml/orders.xml');
                 <div class="inner-addDeleteEditbutton">
                     <a onclick="alert('Click on \'Delete\' in the row you want to do so')"><img src="../icons/backEnd/x-square.svg"> Delete</a>
             </div>
-
+           
             <table class="tableOrderList" id="MainTable">
                 <tr class="tableHeadings">
                     <th>Order ID</th>
@@ -126,7 +126,7 @@ $orders = simplexml_load_file('../xml/orders.xml');
                     <th>Customer Name</th>
                     <th>Order Date</th>
                     <th>Number of items</th>
-                    <th>Status</th>
+                    <th>Order Status</th>
                     <th></th>
                 </tr>
                 <?php foreach ($orders->order as $order) { ?>
@@ -138,7 +138,8 @@ $orders = simplexml_load_file('../xml/orders.xml');
                         <td><?php echo $order->numberOfItems; ?></td>
                         <td><?php echo $order->orderStatus; ?></td>
                         <td>
-                            <a href="backend11.php?action=delete&orderID=<?php echo $order['orderID']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
+                            <a href="backend11.php?action=delete&orderID=<?php echo $order['orderID']; ?>" 
+                            onclick="return confirm('Are you sure to delete this row?')">Delete</a>
                         </td>
                     </tr>
                 <?php } ?>
