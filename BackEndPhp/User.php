@@ -26,13 +26,13 @@ if (isset($_REQUEST['deleteUserID'])) {
                 <img src="../images/other/blank-profile.png" class="list-item-image">
             </div>
             <div class="list-item-content">
-                <form class="list-item-content-form" action="../BackEndPhp/User.php">
+                <div class="list-item-content-form">
                     <h4>' . $user->firstName . ' ' . $user->lastName . '</h4>
                     <p>ID: ' . $user->userID . '</p>
-                    <input type="hidden" name="editUserID" value="' . $user->userID . '"/>
-                    <input class="deleteEditUser p9but" type="submit" name="BackEndEditUser" value="Edit User">
-                    <input class="deleteEditUser p9but" id="userDelete" type="submit" name="BackEndDeleteUser" value="Delete User">
-                </form>
+                    <input type="hidden" id="getUserID" value="' . $user->userID . '"/>
+                    <a href="backEnd10.php" class="deleteEditUser p9but" id="userEdit">Edit User</a>
+                    <button class="deleteEditUser p9but" id="userDelete">Delete User</button>
+                </div>
             </div>                            
         </li>
         ';
@@ -41,18 +41,16 @@ if (isset($_REQUEST['deleteUserID'])) {
     echo $showUserRow;
 }
 
-if (isset($_GET['BackEndEditUser'])) {
-    $_SESSION['editUserID'] = $_GET['editUserID'];
+if (isset($_REQUEST['editUserID'])) {
+    $_SESSION['editUserID'] = $_REQUEST['editUserID'];
     $_SESSION['userToEdit'] = true;
 
-    // echo $_SESSION['editUserID'];
-
-    header('Location: ../BackEnd/backEnd10.php');
+    // echo $_SESSION['editUserID'];    
 }
 
-// if (!isset($_SESSION['userToEdit'])) {
-//     $_SESSION['userToEdit'] = false;
-// }
+if (!isset($_SESSION['userToEdit'])) {
+    $_SESSION['userToEdit'] = false;
+}
 
 if (isset($_GET['submit'])) {
     $firstname = $_GET['firstName'];
@@ -95,6 +93,8 @@ if (isset($_GET['BackEndAddUser'])) {
     $file = '../xml/users.xml';
 
     $users = simplexml_load_file($file);
+
+
 
     if ($_SESSION['userToEdit'] == false) {
         $user = $users->addChild("user");
@@ -139,3 +139,9 @@ if (isset($_GET['login'])) {
 
     header('Location: ../index.php');
 }
+
+
+// unset($_SESSION['allSessions']);
+// unset($_SESSION[$aURL]);
+// session_unset();
+// session_destroy();
