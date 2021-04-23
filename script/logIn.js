@@ -9,7 +9,7 @@ getXML.responseType = 'document';
 getXML.overrideMimeType('text/xml');
 
 getXML.onload = function () {
-    if (getXML.readyState === getXML.DONE && getXML.status === 200) {
+    if (getXML.readyState == 4 && getXML.status == 200) {
         let users = getXML.responseXML.querySelectorAll("users user");
         let getEmail = getXML.responseXML.querySelectorAll("users user Email");
         let getPassword = getXML.responseXML.querySelectorAll("users user Password");
