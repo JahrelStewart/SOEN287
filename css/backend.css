@@ -217,22 +217,22 @@ td {
     border-radius: 4px;
 }
 
-/* .deleteEditUser {
+.deleteEditUser {
     background-color: #223843;
     border: none;
     color: #FBFCFF;
     padding: 10px;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 17px;
     font-family: 'Overlock',
         cursive;
     text-align: center;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 4px;
+}
 
-} */
-
-/* .p9but {
+.p9but {
     transition: all 100ms ease-out;
 }
 
@@ -245,7 +245,7 @@ td {
     border: none;
     outline: none;
     transform: scale(0.97);
-} */
+}
 
 .profile-picture {
     display: flex;
