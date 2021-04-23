@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (isset($_SESSION['userToEdit'])) {
+    $_SESSION['userToEdit'] = false;
+}
 ?>
 
 <!DOCTYPE html>
@@ -61,13 +64,13 @@ session_start();
                                     <img src="../images/other/blank-profile.png" class="list-item-image">
                                 </div>
                                 <div class="list-item-content">
-                                    <form class="list-item-content-form" action="../BackEndPhp/User.php">
+                                    <div class="list-item-content-form">
                                         <h4>' . $user->firstName . ' ' . $user->lastName . '</h4>
                                         <p>ID: ' . $user->userID . '</p>
-                                        <input type="hidden" name="editUserID" id="getUserID" value="' . $user->userID . '"/>
-                                        <input class="deleteEditUser p9but" type="submit" name="BackEndEditUser" value="Edit User">
-                                        <input class="deleteEditUser p9but" id="userDelete" type="submit" name="BackEndDeleteUser" value="Delete User">
-                                    </form>
+                                        <input type="hidden" id="getUserID" value="' . $user->userID . '"/>
+                                        <a href="backEnd10.php" class="deleteEditUser p9but" id="userEdit">Edit User</a>
+                                        <button class="deleteEditUser p9but" id="userDelete">Delete User</button>
+                                    </div>
                                 </div>                            
                             </li>
                             ';
