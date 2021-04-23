@@ -2,9 +2,9 @@ const logInfo = document.querySelectorAll('.SignUpForm input');
 const logIn = document.querySelector('.SignUpForm .row3 .LogIn');
 logIn.style.pointerEvents = "none";
 getXML = new XMLHttpRequest();
+getXML.open("GET", "../xml/users.xml", true);
 
-getXML.onload = function () {    
-    getXML.open("GET", "../xml/users.xml", true);
+getXML.onload = function () {        
     getXML.responseType = 'document';
     // Force the response to be parsed as XML
     getXML.overrideMimeType('text/xml');
@@ -44,5 +44,6 @@ getXML.onload = function () {
         });
     }
 
-    getXML.send();
 };
+
+getXML.send();
