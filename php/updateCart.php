@@ -34,7 +34,8 @@ if (!isset($_REQUEST['itemPrice'])) {
 
 if (!isset($_SESSION['ShoppingCartSession'])) {
     $_SESSION['ShoppingCartSession'] = array();
-} else {
+}
+if (isset($_SESSION['ShoppingCartSession'])) {
     if (array_key_exists($itemLink, $_SESSION['ShoppingCartSession'])) {
         $_SESSION['ShoppingCartSession'][$itemLink]->item_name = $itemName;
         $_SESSION['ShoppingCartSession'][$itemLink]->item_image = $itemImage;
