@@ -1,8 +1,18 @@
 <?php
 include('./php/cartClass.php');
-session_start(); 
+session_start();
 
-if(!isset($_SESSION['ShoppingCartSession'])){        
+$pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
+if ($pageWasRefreshed) {
+    $_SESSION['islogged'] = false;
+    //unset($_SESSION["isLogged"]);
+} else {
+}
+if (!isset($_SESSION['isLogged'])) {
+    $_SESSION['isLogged'] = false;
+}
+
+if (!isset($_SESSION['ShoppingCartSession'])) {
     $_SESSION['ShoppingCartSession'] = array();
 }
 
@@ -48,18 +58,18 @@ if(!isset($_SESSION['ShoppingCartSession'])){
             <div class="navbar col-12">
                 <!--Home brings us back to main page -->
                 <div class="inner-Navbar">
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
 
                     <!--class drop down Aisle in menu bar -->
                     <div class="dropdown">
                         <div class="dropbutton">Aisle</div>
                         <div class="dropdown-content">
-                            <a href="./Aisles/fruitsAisle.html">Fruits and Vegetables</a>
-                            <a href="./Aisles/dairyAisle.html">Dairy</a>
-                            <a href="./Aisles/pastaAisle.html">Pasta</a>
-                            <a href="./Aisles/meatAisle.html">Meats</a>
-                            <a href="./Aisles/seafoodAisle.html">Seafood</a>
-                            <a href="./Aisles/candyAisle.html">Candy</a>
+                            <a href="./Aisles/fruitsAisle.php">Fruits and Vegetables</a>
+                            <a href="./Aisles/dairyAisle.php">Dairy</a>
+                            <a href="./Aisles/pastaAisle.php">Pasta</a>
+                            <a href="./Aisles/meatAisle.php">Meats</a>
+                            <a href="./Aisles/seafoodAisle.php">Seafood</a>
+                            <a href="./Aisles/candyAisle.php">Candy</a>
                         </div>
                     </div>
                 </div>
@@ -74,12 +84,12 @@ if(!isset($_SESSION['ShoppingCartSession'])){
 
                 <div class="information">
                     <div class="itemList">
-                        
-                        <?php 
-                            $showItem = '';                                                    
 
-                            foreach($_SESSION['ShoppingCartSession'] as $key => $value){
-                                $showItem .= '
+                        <?php
+                        $showItem = '';
+
+                        foreach ($_SESSION['ShoppingCartSession'] as $key => $value) {
+                            $showItem .= '
                                 <div class="item">
                                     <div class="column">
                                         <div class="delete-btn">
@@ -90,27 +100,27 @@ if(!isset($_SESSION['ShoppingCartSession'])){
                                     </div>
 
                                     <div class="column">
-                                        <div style="background-image:url('.$value->item_image.')"></div>
+                                        <div style="background-image:url(' . $value->item_image . ')"></div>
                                     </div>
 
                                     <div class="column">
-                                        <a href="'.$value->item_link.'">'.$value->item_name.'</a>
+                                        <a href="' . $value->item_link . '">' . $value->item_name . '</a>
                                     </div>
 
                                     <div class="column">
                                         <button type="button" class="plusMinus">-</button>
 
-                                        <input class="input-quantity" type="number" value="'.$value->item_quantity.'">
+                                        <input class="input-quantity" type="number" value="' . $value->item_quantity . '">
 
                                         <button type="button" class="plusMinus">+</button>
                                     </div>
 
-                                    <div class="column" data-value="'.$value->item_price.'">$'.number_format($value->item_price * $value->item_quantity, 2, '.', '').'</div>
+                                    <div class="column" data-value="' . $value->item_price . '">$' . number_format($value->item_price * $value->item_quantity, 2, '.', '') . '</div>
                                 </div>
                                 ';
-                            }
-                            
-                            echo $showItem;
+                        }
+
+                        echo $showItem;
                         ?>
 
                     </div>
@@ -124,7 +134,7 @@ if(!isset($_SESSION['ShoppingCartSession'])){
                             <div class="price"><span>QST</span> 9.98%</div>
                         </div>
                         <div class="options">
-                            <a href="./index.html" class="cart-button">Continue Shopping</a>
+                            <a href="./index.php" class="cart-button">Continue Shopping</a>
                             <a class="cart-button">Proceed to Checkout</a>
                         </div>
                     </div>
@@ -165,7 +175,14 @@ if(!isset($_SESSION['ShoppingCartSession'])){
                         </ul>
                     </div>
 
-                    <a href="./BackEnd/backEnd7.html" class="backEnd">Back End</a>
+                    <?php
+                    if ($_SESSION['islogged'] === true) {
+                        echo "<a href='../BackEnd/backEnd7.php' class='backEnd'>Back End</a>";
+                        //session_destroy();
+                    } else {
+                    }
+                    ?>
+                    <button id="logout" onclick=" <?php $_SESSION['isLogged'] = false; ?> location.reload(); ">LOG OUT</button>
 
                 </div>
             </div>
