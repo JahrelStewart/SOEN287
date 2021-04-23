@@ -90,7 +90,7 @@ if (!isset($_SESSION[$filename])) {
             <?php
             $getProductDescription = '../../xml/products.xml';
             $aisles = simplexml_load_file($getProductDescription);
-            $product = $aisles->pasta->garofaloCasarecce;
+            $product = $aisles->pasta->casarecce_garofalo;
 
             $showProductDescription = '
                 <div class="middle">
