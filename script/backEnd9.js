@@ -4,10 +4,7 @@ const userList = document.querySelector('.UserList .list');
 
 userList.addEventListener('click', (event) => {
     if (event.target.matches('#userDelete')) {
-        event.preventDefault();
-
         let deletedID = event.target.parentNode.querySelector('#getUserID').value;
-        // console.log(deletedID);
 
         const deletedUserID = new XMLHttpRequest();
         deletedUserID.onreadystatechange = function () {
@@ -18,6 +15,15 @@ userList.addEventListener('click', (event) => {
 
         deletedUserID.open("GET", "../../BackEndPhp/User.php?deleteUserID=" + deletedID, true);
         deletedUserID.send();
+    }
+
+    if (event.target.matches('#userEdit')) {
+        let editID = event.target.parentNode.querySelector('#getUserID').value;
+
+        const editUserID = new XMLHttpRequest();
+
+        editUserID.open("GET", "../../BackEndPhp/User.php?editUserID=" + editID, true);
+        editUserID.send();
     }
 
 
