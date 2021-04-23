@@ -1,14 +1,14 @@
 const logInfo = document.querySelectorAll('.SignUpForm input');
 const logIn = document.querySelector('.SignUpForm .row3 .LogIn');
 logIn.style.pointerEvents = "none";
+
 getXML = new XMLHttpRequest();
 getXML.open("GET", "../xml/users.xml", true);
+getXML.responseType = 'document';
+// Force the response to be parsed as XML
+getXML.overrideMimeType('text/xml');
 
-getXML.onload = function () {        
-    getXML.responseType = 'document';
-    // Force the response to be parsed as XML
-    getXML.overrideMimeType('text/xml');
-
+getXML.onload = function () {
     if (getXML.readyState === getXML.DONE && getXML.status === 200) {
         let users = getXML.responseXML.querySelectorAll("users user");
         let getEmail = getXML.responseXML.querySelectorAll("users user Email");
@@ -42,8 +42,8 @@ getXML.onload = function () {
 
             });
         });
-    }
 
+    }
 };
 
 getXML.send();
