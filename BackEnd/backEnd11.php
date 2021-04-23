@@ -1,3 +1,4 @@
+<!-- start this one -->
 <?php
 if (isset($_GET['action'])) {
     $orders = simplexml_load_file('../xml/orders.xml');
@@ -17,7 +18,7 @@ if (isset($_GET['action'])) {
 
 $orders = simplexml_load_file('../xml/orders.xml');
 ?> 
-
+<!-- end this one -->
 <!DOCTYPE html>
 <html>
 
@@ -116,8 +117,10 @@ $orders = simplexml_load_file('../xml/orders.xml');
                     <a href="backEnd12.html"><img src="../icons/backEnd/pencil-square.svg"> Edit</a>
                 </div>
                 <div class="inner-addDeleteEditbutton">
+                    <!-- start -->
                     <a onclick="alert('Click on \'Delete\' in the row you want to do so')"><img src="../icons/backEnd/x-square.svg"> Delete</a>
-            </div>
+                    <!-- end -->
+                </div>
            
             <table class="tableOrderList" id="MainTable">
                 <tr class="tableHeadings">
@@ -129,7 +132,30 @@ $orders = simplexml_load_file('../xml/orders.xml');
                     <th>Order Status</th>
                     <th></th>
                 </tr>
-                <?php foreach ($orders->order as $order) { ?>
+                <!-- start -->
+                <?php
+                $showOrderRow='';
+                foreach ($orders->children() as $order) {
+                        $showOrderRow .= '
+                            <tr>
+                            <td>' . $order->orderID . '</td>
+                            <td>' . $order->customerID . '</td>
+                            <td>' . $order->customerName . '</td>
+                            <td>' . $order->orderDate . '</td>
+                            <td>' . $order->numberOfItems . '</td>
+                            <td>' . $order->orderStatus . '</td>
+                            <th><a href="backend11.php?action=delete&orderID=<?php echo $order[\'orderID\']; ?>" 
+                            onclick="return confirm(\'Are you sure to delete this row?\')">Delete</a></th>
+                            </tr>
+                            ';
+                    }
+
+                    echo $showOrderRow;
+                ?>
+                <!-- end -->
+
+                
+                <!-- <?php foreach ($orders->order as $order) { ?>
                     <tr>
                         <td><?php echo $order->orderID; ?></td>
                         <td><?php echo $order->customerID; ?></td>
@@ -142,7 +168,7 @@ $orders = simplexml_load_file('../xml/orders.xml');
                             onclick="return confirm('Are you sure to delete this row?')">Delete</a>
                         </td>
                     </tr>
-                <?php } ?>
+                <?php } ?> -->
                 <tbody id="BodyRows">
 
                 </tbody>

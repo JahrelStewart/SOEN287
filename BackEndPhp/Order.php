@@ -1,3 +1,4 @@
+<!-- start this one -->
 <?php
         session_start();
 
@@ -34,6 +35,7 @@
         }
 
         ?>
+<!-- end this one -->
 <!-- try new add -->
 <!-- <?php
 if (isset($_POST['submit'])) {
