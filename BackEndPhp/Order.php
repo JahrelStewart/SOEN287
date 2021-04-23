@@ -93,5 +93,5 @@ if (isset($_GET['orderSubmit'])) {
 
     $orders->asXML($file);
 
-    header('Location: ../BackEnd/backEnd11.php');
+    header('Location: ../BackEnd/backend11.php');
 }
