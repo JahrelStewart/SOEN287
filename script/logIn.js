@@ -8,7 +8,7 @@ getXML.responseType = 'document';
 // Force the response to be parsed as XML
 getXML.overrideMimeType('text/xml');
 
-window.onload = function () {
+getXML.onload = function () {
     if (getXML.readyState === getXML.DONE && getXML.status === 200) {
         let users = getXML.responseXML.querySelectorAll("users user");
         let getEmail = getXML.responseXML.querySelectorAll("users user Email");
