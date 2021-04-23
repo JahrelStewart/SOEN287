@@ -34,10 +34,10 @@ session_start();
         <div class="BEmain">
             <div class="addDeleteEditbutton" style="width: 80%">
                 <div class="inner-addDeleteEditbutton">
-                    <a href="backend8.php"><img src="../icons/backEnd/plus-square.svg"> Add</a>
+                    <a href="backEnd8.php"><img src="../icons/backEnd/plus-square.svg"> Add</a>
                 </div>
                 <div class="inner-addDeleteEditbutton">
-                    <a href="backend8.php"><img src="../icons/backEnd/pencil-square.svg"> Edit</a>
+                    <a href="backEnd8.php"><img src="../icons/backEnd/pencil-square.svg"> Edit</a>
                 </div>
                 <div class="inner-addDeleteEditbutton">
                     <a><img src="../icons/backEnd/x-square.svg"> Delete</a>
