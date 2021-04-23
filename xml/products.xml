@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aisle>
+    <fruits>
+        <apple>
+            <productID>0</productID>
+            <name>Red Apple</name>
+            <image>../../images/fruitAisle/apple.jpg</image>
+            <weight>5</weight>
+            <price>0.75</price>
+        </apple>
+        <banana>
+            <productID>1</productID>
+            <name>Banana</name>
+            <image>../../images/fruitAisle/banana.jpg</image>
+            <weight>50</weight>
+            <price>2.75</price>
+        </banana>
+        <orange>
+            <productID>2</productID>
+            <name>Orange</name>
+            <image>../../images/fruitAisle/orange.jpg</image>
+            <weight>40</weight>
+            <price>2.33</price>
+        </orange>
+        <cucumber>
+            <productID>3</productID>
+            <name>Cucumber</name>
+            <image>../../images/fruitAisle/cucumber.jpg</image>
+            <weight>100</weight>
+            <price>7.40</price>
+        </cucumber>
+        <carrot>
+            <productID>4</productID>
+            <name>Carrot</name>
+            <image>../../images/fruitAisle/carrot.jpg</image>
+            <weight>120</weight>
+            <price>2.99</price>
+        </carrot>
+        <pomegranate>
+            <productID>5</productID>
+            <name>Pomegranate</name>
+            <image>../../images/fruitAisle/pomegranate.jpg</image>
+            <weight>50</weight>
+            <price>13.75</price>
+        </pomegranate>
+        <tomato>
+            <productID>6</productID>
+            <name>Tomato</name>
+            <image>../../images/fruitAisle/tomato.jpg</image>
+            <weight>70</weight>
+            <price>0.99</price>
+        </tomato>
+        <grape>
+            <productID>7</productID>
+            <name>Grapes</name>
+            <image>../../images/fruitAisle/grape.png</image>
+            <weight>150</weight>
+            <price>5.00</price>
+        </grape>
+        <pineapple>
+            <productID>8</productID>
+            <name>Pineapple</name>
+            <image>../../images/fruitAisle/pineapple.jpg</image>
+            <weight>80</weight>
+            <price>20.25</price>
+        </pineapple>
+    </fruits>
+
+    <dairy>
+        <choco1>
+            <productID>9</productID>
+            <name>Chocolate Milk 2%</name>
+            <image>../../images/dairyAisle/choco1.jpg</image>
+            <weight>1</weight>
+            <price>2.78</price>
+        </choco1>
+        <coffeeCream>
+            <productID>10</productID>
+            <name>Coffee Cream 10%</name>
+            <image>../../images/dairyAisle/coffeeCream.jpg</image>
+            <weight>1</weight>
+            <price>5.58</price>
+        </coffeeCream>
+        <milk1>
+            <productID>11</productID>
+            <name>Milk 1%</name>
+            <image>../../images/dairyAisle/milk1.jpg</image>
+            <weight>4</weight>
+            <price>6.38</price>
+        </milk1>
+        <milk2>
+            <productID>12</productID>
+            <name>Milk 2%</name>
+            <image>../../images/dairyAisle/milk2.jpeg</image>
+            <weight>4</weight>
+            <price>6.98</price>
+        </milk2>
+        <whippingCream>
+            <productID>13</productID>
+            <name>Whipping Cream 35%</name>
+            <image>../../images/dairyAisle/whippingCream.jpg</image>
+            <weight>473</weight>
+            <price>3.39</price>
+        </whippingCream>
+        <creamcheese>
+            <productID>14</productID>
+            <name>Cream Cheese</name>
+            <image>../../images/dairyAisle/creamcheese.jpg</image>
+            <weight>250</weight>
+            <price>4.16</price>
+        </creamcheese>
+        <saltedbutter>
+            <productID>15</productID>
+            <name>Salted Butter</name>
+            <image>../../images/dairyAisle/saltedbutter.jpg</image>
+            <weight>454</weight>
+            <price>5.00</price>
+        </saltedbutter>
+        <yogurt>
+            <productID>16</productID>
+            <name>Plain Greek Yogurt</name>
+            <image>../../images/dairyAisle/yogurt.jpg</image>
+            <weight>750</weight>
+            <price>5.36</price>
+        </yogurt>
+        <margarine>
+            <productID>17</productID>
+            <name>Margarine</name>
+            <image>../../images/dairyAisle/margarine.jpg</image>
+            <weight>250</weight>
+            <price>4.48</price>
+        </margarine>
+    </dairy>
+
+    <pasta>
+        <dececco_rigatoni>
+            <productID>18</productID>
+            <name>Dececco Rigatoni</name>
+            <image>../../images/pastaAisle/rigatoni-dececco.png</image>
+            <weight>453</weight>
+            <price>9.99</price>
+        </dececco_rigatoni>
+        <linguine>
+            <productID>19</productID>
+            <name>Rao's Linguine</name>
+            <image>../../images/pastaAisle/linguine.jpg</image>
+            <weight>500</weight>
+            <price>3.29</price>
+        </linguine>
+        <penne_rigate>
+            <productID>20</productID>
+            <name>Penne Rigate</name>
+            <image>../../images/pastaAisle/penne-rigate.png</image>
+            <weight>454</weight>
+            <price>3.99</price>
+        </penne_rigate>
+        <barilla_campanelle>
+            <productID>21</productID>
+            <name>Barilla Campanelle</name>
+            <image>../../images/pastaAisle/barilla-campanelle.jpg</image>
+            <weight>454</weight>
+            <price>2.99</price>
+        </barilla_campanelle>
+        <garofaloCasarecce>
+            <productID>22</productID>
+            <name>Garofalo Casarecce</name>
+            <image>../../images/pastaAisle/casarecce-garofalo.jpg</image>
+            <weight>500</weight>
+            <price>2.99</price>
+        </garofaloCasarecce>
+        <fusilli_voiello>
+            <productID>23</productID>
+            <name>Voiello Fusilli</name>
+            <image>../../images/pastaAisle/fusilli-voiello.jpg</image>
+            <weight>500</weight>
+            <price>2.99</price>
+        </fusilli_voiello>
+        <garofalo_tagliantelle>
+            <productID>24</productID>
+            <name>Garofalo Tagliatelle</name>
+            <image>../../images/pastaAisle/garofalo-tagliantelle.jpg</image>
+            <weight>500</weight>
+            <price>3.99</price>
+        </garofalo_tagliantelle>
+        <pappardelle>
+            <productID>25</productID>
+            <name>Pappardelle</name>
+            <image>../../images/pastaAisle/pappardelle.jpg</image>
+            <weight>500</weight>
+            <price>2.99</price>
+        </pappardelle>
+        <red_cavatappi>
+            <productID>26</productID>
+            <name>Red Cavatappi</name>
+            <image>../../images/pastaAisle/Red-Cavatappi.png</image>
+            <weight>500</weight>
+            <price>3.99</price>
+        </red_cavatappi>
+    </pasta>
+
+    <meats>
+        <sirloin_steak>
+            <productID>27</productID>
+            <name>Sirloin Steak</name>
+            <image>../../images/meatAisle/sirloin_steak.jpg</image>
+            <weight>244</weight>
+            <price>9.14</price>
+        </sirloin_steak>
+        <chicken_breasts>
+            <productID>28</productID>
+            <name>Chicken Breasts</name>
+            <image>../../images/meatAisle/chicken_breasts.jpg</image>
+            <weight>1000</weight>
+            <price>13.69</price>
+        </chicken_breasts>
+        <duck>
+            <productID>29</productID>
+            <name>Grade A Duck</name>
+            <image>../../images/meatAisle/Grade_A_Duck.jpg</image>
+            <weight>2461</weight>
+            <price>19.23</price>
+        </duck>
+        <lamb_chops>
+            <productID>30</productID>
+            <name>Lamb Rib Chops</name>
+            <image>../../images/meatAisle/lamb_chops.jpg</image>
+            <weight>189</weight>
+            <price>12.12</price>
+        </lamb_chops>
+        <pork_loin>
+            <productID>31</productID>
+            <name>Pork Loin Center Chops</name>
+            <image>../../images/meatAisle/pork_loin.jpg</image>
+            <weight>600</weight>
+            <price>8.49</price>
+        </pork_loin>
+        <sausages>
+            <productID>32</productID>
+            <name>Smoked Sausages</name>
+            <image>../../images/meatAisle/sausages.jpg</image>
+            <weight>375</weight>
+            <price>7.56</price>
+        </sausages>
+        <bacon>
+            <productID>33</productID>
+            <name>Smoked Bacon</name>
+            <image>../../images/meatAisle/bacon.jpg</image>
+            <weight>375</weight>
+            <price>4.97</price>
+        </bacon>
+        <whole_chicken>
+            <productID>34</productID>
+            <name>Whole Chicken</name>
+            <image>../../images/meatAisle/whole_chicken.jpg</image>
+            <weight>1600</weight>
+            <price>14.59</price>
+        </whole_chicken>
+        <wings>
+            <productID>35</productID>
+            <name>Prime Chicken Wings</name>
+            <image>../../images/meatAisle/wings.jpg</image>
+            <weight>800</weight>
+            <price>9.99</price>
+        </wings>
+    </meats>
+
+    <seafood>
+        <shrimp>
+            <productID>36</productID>
+            <name>Shrimp</name>
+            <image>../../images/seafoodAisle/shrimp.jpg</image>
+            <weight>133</weight>
+            <price>12.10</price>
+        </shrimp>
+        <lobster>
+            <productID>37</productID>
+            <name>Lobster</name>
+            <image>../../images/seafoodAisle/lobster.jpg</image>
+            <weight>50</weight>
+            <price>30.00</price>
+        </lobster>
+        <salmon>
+            <productID>38</productID>
+            <name>Salmon</name>
+            <image>../../images/seafoodAisle/Salmon.jpg</image>
+            <weight>40</weight>
+            <price>60.00</price>
+        </salmon>
+        <blue_crab>
+            <productID>39</productID>
+            <name>Blue Crab</name>
+            <image>../../images/seafoodAisle/blue-crab.jpg</image>
+            <weight>100</weight>
+            <price>50.00</price>
+        </blue_crab>
+        <fresh_calamari>
+            <productID>40</productID>
+            <name>Fresh Calamari</name>
+            <image>../../images/seafoodAisle/fresh-calamari.jpg</image>
+            <weight>120</weight>
+            <price>35.00</price>
+        </fresh_calamari>
+        <mussels>
+            <productID>41</productID>
+            <name>Mussels</name>
+            <image>../../images/seafoodAisle/mussels.jpg</image>
+            <weight>50</weight>
+            <price>15.00</price>
+        </mussels>
+        <ikura>
+            <productID>42</productID>
+            <name>Ikura(Salmon Roe)</name>
+            <image>../../images/seafoodAisle/red-roe.jpg</image>
+            <weight>70</weight>
+            <price>80.00</price>
+        </ikura>
+        <red_seabream>
+            <productID>43</productID>
+            <name>Red Seabream</name>
+            <image>../../images/seafoodAisle/red-seabream.jpg</image>
+            <weight>150</weight>
+            <price>30.99</price>
+        </red_seabream>
+        <tuna>
+            <productID>44</productID>
+            <name>Tuna</name>
+            <image>../../images/seafoodAisle/tuna.jpg</image>
+            <weight>400</weight>
+            <price>150.00</price>
+        </tuna>
+    </seafood>
+
+    <candy>
+        <gummy>
+            <productID>45</productID>
+            <name>Assorted Gummies</name>
+            <image>../../images/candyAisle/gummies.jpg</image>
+            <weight>150</weight>
+            <price>1.75</price>
+        </gummy>
+        <mintChocolate>
+            <productID>46</productID>
+            <name>Mint Chocolate</name>
+            <image>../../images/candyAisle/mint-chocolate.jpg</image>
+            <weight>50</weight>
+            <price>4.55</price>
+        </mintChocolate>
+        <sweetMint>
+            <productID>47</productID>
+            <name>Sweet Mint</name>
+            <image>../../images/candyAisle/sweet-mints.jpg</image>
+            <weight>25</weight>
+            <price>0.45</price>
+        </sweetMint>
+        <milkLollies>
+            <productID>48</productID>
+            <name>Milk Lollies</name>
+            <image>../../images/candyAisle/milk-lollies.jpg</image>
+            <weight>10</weight>
+            <price>0.56</price>
+        </milkLollies>
+        <donut>
+            <productID>49</productID>
+            <name>Fudge Donuts</name>
+            <image>../../images/candyAisle/donut.jpg</image>
+            <weight>125</weight>
+            <price>5.69</price>
+        </donut>
+        <muffin>
+            <productID>50</productID>
+            <name>Ginger Muffins</name>
+            <image>../../images/candyAisle/muffin.jpg</image>
+            <weight>20</weight>
+            <price>14.41</price>
+        </muffin>
+        <gingerbread>
+            <productID>51</productID>
+            <name>GingerBread</name>
+            <image>../../images/candyAisle/gingerbread.jpg</image>
+            <weight>75</weight>
+            <price>10.03</price>
+        </gingerbread>
+        <breathMint>
+            <productID>52</productID>
+            <name>Breath Mint</name>
+            <image>../../images/candyAisle/breath-mint.jpg</image>
+            <weight>2</weight>
+            <price>0.10</price>
+        </breathMint>
+        <marshmellow>
+            <productID>53</productID>
+            <name>Marshmellow</name>
+            <image>../../images/candyAisle/marshmellow.jpg</image>
+            <weight>25</weight>
+            <price>8.40</price>
+        </marshmellow>
+    </candy>
+
+</aisle>
