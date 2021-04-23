@@ -4,11 +4,11 @@ logIn.style.pointerEvents = "none";
 
 getXML = new XMLHttpRequest();
 getXML.open("GET", "../xml/users.xml", true);
-getXML.responseType = 'document';
+// getXML.responseType = 'document';
 // Force the response to be parsed as XML
-getXML.overrideMimeType('text/xml');
+// getXML.overrideMimeType('text/xml');
 
-getXML.onload = function () {
+getXML.onreadystatechange = function () {
     if (getXML.readyState == 4 && getXML.status == 200) {
         let users = getXML.responseXML.querySelectorAll("users user");
         let getEmail = getXML.responseXML.querySelectorAll("users user Email");
