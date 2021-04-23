@@ -3,6 +3,15 @@ const orderDeleteButton = document.querySelector('.addDeleteEditbutton .inner-ad
 const orderTable = document.querySelector('.tableOrderList .tableOrderBody');
 const orderRows = document.querySelectorAll('.tableOrderList .tableOrderBody tr');
 
+window.addEventListener("pageshow", function (event) {
+    var historyTraversal = event.persisted ||
+        (typeof window.performance != "undefined" &&
+            window.performance.navigation.type === 2);
+    if (historyTraversal) {
+        window.location.reload();
+    }
+});
+
 orderEditButton.style.pointerEvents = "none";
 orderDeleteButton.style.pointerEvents = "none";
 
