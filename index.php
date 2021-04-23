@@ -1,3 +1,17 @@
+<?php
+include('./BackEndPhp/User.php');
+$pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
+if ($pageWasRefreshed) {
+    $_SESSION['islogged'] = false;
+    //unset($_SESSION["isLogged"]);
+} else {
+}
+if (!isset($_SESSION['isLogged'])) {
+    $_SESSION['isLogged'] = false;
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -41,18 +55,18 @@
             <div class="navbar col-12">
                 <!--Home brings us back to main page -->
                 <div class="inner-Navbar">
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
 
                     <!--class drop down Aisle in menu bar -->
                     <div class="dropdown">
                         <div class="dropbutton">Aisle</div>
                         <div class="dropdown-content">
-                            <a href="./Aisles/fruitsAisle.html">Fruits and Vegetables</a>
-                            <a href="./Aisles/dairyAisle.html">Dairy</a>
-                            <a href="./Aisles/pastaAisle.html">Pasta</a>
-                            <a href="./Aisles/meatAisle.html">Meats</a>
-                            <a href="./Aisles/seafoodAisle.html">Seafood</a>
-                            <a href="./Aisles/candyAisle.html">Candy</a>
+                            <a href="./Aisles/fruitsAisle.php">Fruits and Vegetables</a>
+                            <a href="./Aisles/dairyAisle.php">Dairy</a>
+                            <a href="./Aisles/pastaAisle.php">Pasta</a>
+                            <a href="./Aisles/meatAisle.php">Meats</a>
+                            <a href="./Aisles/seafoodAisle.php">Seafood</a>
+                            <a href="./Aisles/candyAisle.php">Candy</a>
                         </div>
                     </div>
                 </div>
@@ -84,43 +98,37 @@ CHOOSE FROM!</pre>
                     <div class="carousel">
                         <ul class="list-container">
                             <li class="list currentSlide first">
-                                <div class="list-pic"
-                                    style="background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2017/07/food-1.jpg)">
+                                <div class="list-pic" style="background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2017/07/food-1.jpg)">
                                 </div>
                                 <div class="texts">Fruits and Vegetables</div>
                             </li>
 
                             <li class="list second">
-                                <div class="list-pic"
-                                    style="background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2017/07/fancy-dinner-with-seafood-pasta-and-crayfish.jpg)">
+                                <div class="list-pic" style="background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2017/07/fancy-dinner-with-seafood-pasta-and-crayfish.jpg)">
                                 </div>
                                 <div class="texts">SeaFood and Fish</div>
                             </li>
 
                             <li class="list third">
-                                <div class="list-pic"
-                                    style="background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2017/07/orange-and-yellow-macarons-with-flowers.jpg)">
+                                <div class="list-pic" style="background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2017/07/orange-and-yellow-macarons-with-flowers.jpg)">
                                 </div>
                                 <div class="texts">Candy</div>
                             </li>
 
                             <li class="list fourth">
-                                <div class="list-pic"
-                                    style="background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2019/04/mae-mu-pouring-milk.jpg)">
+                                <div class="list-pic" style="background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2019/04/mae-mu-pouring-milk.jpg)">
                                 </div>
                                 <div class="texts">Dairy</div>
                             </li>
 
                             <li class="list fifth">
-                                <div class="list-pic"
-                                    style="background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2018/02/raw-beef-meat.jpg)">
+                                <div class="list-pic" style="background-image: url(https://www.foodiesfeed.com/wp-content/uploads/2018/02/raw-beef-meat.jpg)">
                                 </div>
                                 <div class="texts">Meats</div>
                             </li>
 
                             <li class="list sixth">
-                                <div class="list-pic"
-                                    style="background-image: url(https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg)">
+                                <div class="list-pic" style="background-image: url(https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg)">
                                 </div>
                                 <div class="texts">Pasta</div>
                             </li>
@@ -173,7 +181,14 @@ CHOOSE FROM!</pre>
                         </ul>
                     </div>
 
-                    <a href="./BackEnd/backEnd7.html" class="backEnd">Back End</a>
+                    <?php
+                    if ($_SESSION['islogged'] === true) {
+                        echo "<a href='../BackEnd/backEnd7.php' class='backEnd'>Back End</a>";
+                        //session_destroy();
+                    } else {
+                    }
+                    ?>
+                    <button id="logout" onclick=" <?php $_SESSION['isLogged'] = false; ?> location.reload(); ">LOG OUT</button>
 
                 </div>
             </div>
