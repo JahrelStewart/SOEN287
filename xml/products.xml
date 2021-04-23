@@ -161,13 +161,13 @@
             <weight>454</weight>
             <price>2.99</price>
         </barilla_campanelle>
-        <garofaloCasarecce>
+        <casarecce_garofalo>
             <productID>22</productID>
             <name>Garofalo Casarecce</name>
             <image>../../images/pastaAisle/casarecce-garofalo.jpg</image>
             <weight>500</weight>
             <price>2.99</price>
-        </garofaloCasarecce>
+        </casarecce_garofalo>
         <fusilli_voiello>
             <productID>23</productID>
             <name>Voiello Fusilli</name>
