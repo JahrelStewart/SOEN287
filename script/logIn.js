@@ -2,20 +2,21 @@ const logInfo = document.querySelectorAll('.SignUpForm input');
 const logIn = document.querySelector('.SignUpForm .row3 .LogIn');
 logIn.style.pointerEvents = "none";
 
-getXML = new XMLHttpRequest();
-getXML.open("GET", "../xml/users.xml", true);
-// getXML.responseType = 'document';
-// Force the response to be parsed as XML
-// getXML.overrideMimeType('text/xml');
+logInfo.forEach(info => {
+    info.addEventListener('input', () => {
 
-getXML.onreadystatechange = function () {
-    if (getXML.readyState == 4 && getXML.status == 200) {
-        let users = getXML.responseXML.querySelectorAll("users user");
-        let getEmail = getXML.responseXML.querySelectorAll("users user Email");
-        let getPassword = getXML.responseXML.querySelectorAll("users user Password");
+        getXML = new XMLHttpRequest();
+        getXML.open("GET", "../xml/users.xml", true);
+        // getXML.responseType = 'document';
+        // Force the response to be parsed as XML
+        // getXML.overrideMimeType('text/xml');
 
-        logInfo.forEach(info => {
-            info.addEventListener('input', () => {
+        getXML.onreadystatechange = function () {
+            if (getXML.readyState == 4 && getXML.status == 200) {
+                let users = getXML.responseXML.querySelectorAll("users user");
+                let getEmail = getXML.responseXML.querySelectorAll("users user Email");
+                let getPassword = getXML.responseXML.querySelectorAll("users user Password");
+
                 let goodLogIn = false;
 
                 if (logInfo[0].value != '' || logInfo[1].value != '') {
@@ -40,10 +41,11 @@ getXML.onreadystatechange = function () {
                 }
 
 
-            });
-        });
 
-    }
-};
+            }
+        };
 
-getXML.send();
+        getXML.send();
+
+    });
+});
