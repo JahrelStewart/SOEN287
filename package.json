@@ -1,0 +1,21 @@
+{
+    "name": "SOEN287",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.php",
+    "scripts": {
+        "build": "echo \"No build specified\" && exit 1",
+        "test": "echo \"No test specified\" && exit 1",
+        "start": "node index.php"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JahrelStewart/SOEN287.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JahrelStewart/SOEN287/issues"
+    },
+    "homepage": "https://github.com/JahrelStewart/SOEN287#readme"
+}
